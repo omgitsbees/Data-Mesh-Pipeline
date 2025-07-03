@@ -1,8 +1,8 @@
-# Data Mesh Platform 🚀
+# Data Mesh Platform 
 
 A robust, production-ready data mesh platform for managing data products and lineage relationships across distributed domains. Built with FastAPI, this platform provides comprehensive APIs for data product registration, lineage tracking, and domain-specific data access.
 
-## ✨ Features
+##  Features
 
 ### Core Capabilities
 - **Data Product Management**: Register, update, and manage data products across domains
@@ -18,7 +18,7 @@ A robust, production-ready data mesh platform for managing data products and lin
 - **Scalability**: Configurable limits and pagination support
 - **Error Handling**: Robust error handling with proper HTTP status codes
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.8+
@@ -55,14 +55,14 @@ EXPOSE 8000
 CMD ["python", "main.py"]
 ```
 
-## 📖 API Documentation
+##  API Documentation
 
 Once running, visit:
 - **Interactive API Docs**: `http://localhost:8000/docs`
 - **ReDoc Documentation**: `http://localhost:8000/redoc`
 - **Health Check**: `http://localhost:8000/health`
 
-## 🔧 Configuration
+##  Configuration
 
 Configure the application using environment variables:
 
@@ -83,7 +83,7 @@ export MAX_PRODUCTS=1000
 export MAX_LINEAGE_ENTRIES=10000
 ```
 
-## 📊 API Endpoints
+##  API Endpoints
 
 ### Authentication
 All write operations require an API key in the Authorization header:
@@ -201,7 +201,7 @@ GET /analytics/domains
 GET /analytics/lineage-stats
 ```
 
-## 📋 Data Models
+##  Data Models
 
 ### DataProduct
 ```python
@@ -232,7 +232,7 @@ GET /analytics/lineage-stats
 }
 ```
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Components
 
@@ -253,7 +253,7 @@ GET /analytics/lineage-stats
 4. **Access**: Domain-specific APIs provide data access
 5. **Analytics**: Monitor usage and relationships
 
-## 🔒 Security
+##  Security
 
 - **API Key Authentication**: Required for all write operations
 - **Input Validation**: Comprehensive validation using Pydantic
@@ -261,7 +261,7 @@ GET /analytics/lineage-stats
 - **CORS**: Configurable cross-origin resource sharing
 - **Logging**: Audit trail for all operations
 
-## 📁 Data Storage
+##  Data Storage
 
 The platform uses JSON files for persistence:
 
@@ -277,7 +277,7 @@ Data is automatically:
 - Periodically saved during operation
 - Backed up with error handling
 
-## 🚀 Deployment
+##  Deployment
 
 ### Production Deployment
 
@@ -313,7 +313,7 @@ services:
       - ./data:/app/data
 ```
 
-## 📈 Monitoring
+##  Monitoring
 
 ### Health Check
 ```bash
@@ -335,7 +335,7 @@ Built-in analytics endpoints provide:
 - Usage patterns
 - System health indicators
 
-## 🧪 Testing
+##  Testing
 
 ```bash
 # Install test dependencies
@@ -365,7 +365,7 @@ def test_register_product():
     assert response.status_code == 200
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -394,13 +394,13 @@ mypy main.py
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Support
+##  Support
 
 - **Documentation**: Check the `/docs` endpoint when running
 - **Issues**: Open an issue on GitHub
 - **Discussions**: Use GitHub Discussions for questions
 
-## 🗺️ Roadmap
+##  Roadmap
 
 - [ ] **Database Integration**: PostgreSQL/MongoDB support
 - [ ] **Advanced Authentication**: OAuth2, RBAC
@@ -413,7 +413,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] **CLI Tool**: Command-line interface
 - [ ] **Helm Charts**: Kubernetes deployment
 
-## 📊 Example Usage
+##  Example Usage
 
 ```python
 import requests
@@ -453,6 +453,3 @@ response = requests.post(f"{base_url}/register_lineage", json=lineage, headers=h
 print(f"Lineage registered: {response.json()}")
 ```
 
----
-
-Built with ❤️ using [FastAPI](https://fastapi.tiangolo.com/)
